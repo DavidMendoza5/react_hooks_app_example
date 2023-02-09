@@ -46,12 +46,15 @@ const useInitialState = () => {
     })
   }
 
-  const addToBuyer = (purchase) => setState({...state, purchase: [...state.purchase, purchase]})
+  const addToBuyer = (purchase) => setState({...state, purchase: [...state.purchase, purchase]});
+
+  const addNewOrder = (order) => setState({...state, orders: [...state.orders, order]});
 
   return {
     addToCart,
     removeFromCart,
     addToBuyer,
+    addNewOrder,
     state,
   }
 }
